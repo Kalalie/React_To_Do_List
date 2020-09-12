@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./TodoForm.css";
+
 
 function TodoForm(props){
 // variables
@@ -17,14 +19,16 @@ function TodoForm(props){
 
 // template
     return(
-        <form onSubmit={handleSubmit}>
-            <input
-                value={value}
-                type="text"
-                placeholder="Add Todo..."
-                onChange={(event) => setValue(event.target.value)}
-        />
-        </form>
+        <div className="todo">
+            <form onSubmit={handleSubmit}>
+                <input
+                    value={value}
+                    type="text"
+                    placeholder="Add Todo..."
+                    onChange={(event) => setValue(event.target.value)}
+            />
+            </form>
+        </div>
     );
 }
 
